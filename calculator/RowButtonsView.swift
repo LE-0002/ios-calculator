@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct RowButtonsView: View {
+    let values : [String]
+    init(values: [String] ) {
+        self.values = values;
+    }
+    
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
-            ButtonView(value: "1")
-            ButtonView(value: "2")
-            ButtonView(value: "3")
-            ButtonView(value: "4")
+            ForEach(values, id:\.self) {
+                value1 in ButtonView(value: value1)
+                }
         }
         .padding(0)
         .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -24,6 +28,6 @@ struct RowButtonsView: View {
 
 struct RowButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        RowButtonsView()
+        RowButtonsView(values: ["1", "2", "3", "4"])
     }
 }

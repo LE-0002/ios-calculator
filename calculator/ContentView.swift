@@ -28,11 +28,7 @@ struct ContentView: View {
                   .multilineTextAlignment(.trailing)
                   .foregroundColor(.white)
                   .frame(maxWidth: .infinity, alignment: .trailing)
-                RowButtonsView()
-                RowButtonsView()
-                RowButtonsView()
-                RowButtonsView()
-                RowButtonsView()
+                RowButtonsView(values: ["1", "C", "3", "4"])
             }
             .padding(0)
             .frame(width: 348, alignment: .topLeading)
