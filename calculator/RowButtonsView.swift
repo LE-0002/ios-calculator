@@ -16,7 +16,7 @@ struct RowButtonsView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             ForEach(values, id:\.self) {
-                value1 in ButtonView(value: value1)
+                value in ButtonView(value: value)
                 }
         }
         .padding(0)
